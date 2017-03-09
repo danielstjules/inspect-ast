@@ -2,7 +2,7 @@
 
 A better way to view a compact JS abstract syntax tree.
 
-#### Overview
+## Overview
 
 Imagine you parse the following code to build an AST using something like acorn:
 
