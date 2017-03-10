@@ -1,6 +1,8 @@
 # inspect-ast
 
-A better way to view a compact JS abstract syntax tree.
+A better way to render a compact JS abstract syntax tree for inspection.
+Works with ESTree spec-compliant ASTs, though the returned output is not
+compliant.
 
 ## Overview
 
