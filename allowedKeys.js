@@ -27,7 +27,7 @@ module.exports = {
   ForStatement: ['init', 'test', 'update', 'body'],
   ForInStatement: ['left', 'right', 'body'],
   FunctionDeclaration: ['id', 'params', 'body'],
-  VariableDeclaration: ['declarations', 'kind'],
+  VariableDeclaration: ['declarations'],
   VariableDeclarator: ['id', 'init'],
   ThisExpression: [],
   ArrayExpression: ['elements'],

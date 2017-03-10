@@ -14,7 +14,7 @@ function compact(curr) {
   }
 
   var Node = new Function(
-    'return function ' + curr.type + '() { }'
+    'return function ' + nodeName + '() { }'
   )();
 
   if (!allowedKeys[curr.type]) {
