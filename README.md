@@ -4,6 +4,8 @@ A better way to render a compact JS abstract syntax tree for inspection.
 Works with ESTree spec-compliant ASTs, though the returned output is not
 compliant.
 
+[![Build Status](https://travis-ci.org/danielstjules/inspect-ast.svg?branch=master)](https://travis-ci.org/danielstjules/inspect-ast)
+
 ## Overview
 
 Imagine you parse the following code to build an AST using something like acorn:
