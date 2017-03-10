@@ -1,22 +1,28 @@
 var util = require('util');
-
-// Whitelisted node keys to be kept
-var whitelisted = ['id', 'params', 'declaration', 'body',
-  'argument', 'left', 'operator', 'right', 'name'];
+var allowedKeys = require('./allowedKeys');
 
 function compact(curr) {
   if (curr instanceof Array) {
     return curr.map(compact);
-  } else if (!curr.type) {
+  } else if (!curr || !curr.type) {
     return curr;
+  }
+
+  var nodeName = curr.type;
+  if (curr.kind) {
+    nodeName = curr.kind + nodeName;
   }
 
   var Node = new Function(
     'return function ' + curr.type + '() { }'
   )();
 
+  if (!allowedKeys[curr.type]) {
+    return;
+  }
+
   var node = new Node();
-  whitelisted.forEach((k) => {
+  allowedKeys[curr.type].forEach((k) => {
     if (k in curr) node[k] = compact(curr[k]);
   });
 

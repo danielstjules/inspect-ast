@@ -33,7 +33,9 @@ describe('inspect-ast', function() {
                    BinaryExpression {
                      left: Identifier { name: 'a' },
                      operator: '+',
-                     right: Identifier { name: 'b' } } } ] } } } ] }`
+                     right: Identifier { name: 'b' } } } ] } },
+       specifiers: [],
+       source: null } ] }`
     , res);
   });
 });
