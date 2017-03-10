@@ -1,6 +1,10 @@
 var util = require('util');
 var allowedKeys = require('./allowedKeys');
 
+function capitalize(str) {
+  return str[0].toUpperCase() + str.slice(1);
+}
+
 function compact(curr) {
   if (curr instanceof Array) {
     return curr.map(compact);
@@ -10,7 +14,7 @@ function compact(curr) {
 
   var nodeName = curr.type;
   if (curr.kind) {
-    nodeName = curr.kind + nodeName;
+    nodeName = capitalize(curr.kind) + nodeName;
   }
 
   var Node = new Function(
