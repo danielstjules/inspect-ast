@@ -47,7 +47,6 @@ module.exports = {
 
   // es2015
   ForOfStatement: ['left', 'right', 'body'],
-  VariableDeclaration: [],
   Super: [],
   SpreadElement: ['argument'],
   ArrowFunctionExpression: ['id', 'params', 'body'],
