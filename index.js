@@ -12,13 +12,8 @@ function compact(curr) {
     return curr;
   }
 
-  var nodeName = curr.type;
-  if (curr.kind) {
-    nodeName = capitalize(curr.kind) + nodeName;
-  }
-
   var Node = new Function(
-    'return function ' + nodeName + '() { }'
+    'return function ' + curr.type + '() { }'
   )();
 
   if (!allowedKeys[curr.type]) {

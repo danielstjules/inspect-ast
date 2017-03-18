@@ -1,8 +1,9 @@
 # inspect-ast
 
 A better way to render a compact JS abstract syntax tree for inspection.
-Works with ESTree spec-compliant ASTs, though the returned output is not
-compliant.
+Works with [ESTree](https://github.com/estree/estree) and
+[https://github.com/babel/babylon/blob/master/ast/spec.md](Babel) spec-compliant
+ASTs, though the returned output is not compliant.
 
 [![Build Status](https://travis-ci.org/danielstjules/inspect-ast.svg?branch=master)](https://travis-ci.org/danielstjules/inspect-ast)
 

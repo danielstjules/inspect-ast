@@ -39,7 +39,7 @@ module.exports = {
   BinaryExpression: ['left', 'operator', 'right'],
   AssignmentExpression: ['left', 'operator', 'right'],
   LogicalExpression: ['left', 'operator', 'right'],
-  MemberExpression: ['object', 'property', 'computed'],
+  MemberExpression: ['object', 'property'],
   ConditionalExpression: ['test', 'alternate', 'consequent'],
   CallExpression: ['callee', 'arguments'],
   NewExpression: ['callee', 'arguments'],
@@ -77,5 +77,23 @@ module.exports = {
   ExportAllDeclaration: ['source'],
 
   // es2017
-  AwaitExpression: ['argument']
+  AwaitExpression: ['argument'],
+
+  // Experimental & Babel
+  File: ['program'],
+  RegExpLiteral: ['pattern', 'flags'],
+  NullLiteral: [],
+  StringLiteral: ['value'],
+  BooleanLiteral: ['value'],
+  ObjectProperty: ['value', 'decorators'],
+  ObjectMethod: ['value', 'decorators'],
+  NumericLiteral: ['value'],
+  ClassMethod: ['key', 'value', 'body', 'decorators'],
+  ClassProperty: ['key', 'value'],
+  Decorator: ['expression'],
+  Directive: ['value'],
+  DirectiveLiteral: ['value'],
+  ForAwaitStatement: ['left', 'right', 'body'],
+  RestProperty: ['argument'],
+  SpreadProperty: ['argument']
 };
